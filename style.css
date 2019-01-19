@@ -1,0 +1,8 @@
+.box {
+     margin-left: 200px;
+     margin-right: 200px;
+     border: solid 1px aliceblue;
+     background-color:rgb(112, 167, 250);
+     color:black;
+     padding:18px;
+}
