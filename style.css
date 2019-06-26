@@ -1,8 +1,14 @@
-.box {
-     margin-left: 200px;
-     margin-right: 200px;
-     border: solid 1px aliceblue;
-     background-color:rgb(112, 167, 250);
-     color:black;
-     padding:18px;
+.header {
+     margin-left        : 10px;
+     margin-right       : 10px;
+     border             : solid 5px aliceblue;
+     background-color   :rgb(112, 167, 250);
+     color              :black;
+     padding            :14px;
+     font-family        : "Ubuntu", sans-serif;
+     text-align         : center;
+}
+
+#ctr {
+    text-align: center
 }
