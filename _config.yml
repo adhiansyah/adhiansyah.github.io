@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 title: Adhiansyah Ancha
 description: Weblog seorang penggemar Linux
+layout: index.html
