@@ -9,13 +9,16 @@ Petama kali dibuat pada 24 November 2018, saya baru mengubah total tampilan webl
 
 ## Pengujian berbagai fitur "Hacker"
 
+# Kutipan favorit
 > Orang-orang berpikir komputer akan mencegah mereka membuat kesalahan. Mereka salah. 
 > Dengan komputer, Anda membuat kesalahan lebih banyak
 >                  
 > - Adam Osborne
 
+
+# Salah satu tampilan potongan kode
 ```cpp
-// Potongan kode "cpu.c" dari Kernel Linux
+// Baris 1276 hingga 1306 dari berkas <cpu.c> di Kernel Linux
 void enable_nonboot_cpus(void)
 {
 	int cpu, error;
