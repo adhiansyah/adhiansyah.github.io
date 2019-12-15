@@ -2,13 +2,12 @@
 layout: default
 ---
 
+# Selamat datang di weblog saya
+Petama kali dibuat pada 24 November 2018, saya baru mengubah total tampilan weblog saya pada 15 Desember 2019 karena tidak ada waktu yang tepat untuk mengubah dan pada waktu itu saya agak bosan dengan teknologi web.
+
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 [Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
 # Header 1
 
