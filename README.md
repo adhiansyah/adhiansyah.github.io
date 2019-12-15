@@ -1,3 +1,3 @@
 # Weblog Adhiansyah
 
-https://github.com/barryclark/jekyll-now/
+Kredit: https://github.com/barryclark/jekyll-now/
