@@ -5,33 +5,48 @@ layout: default
 # Selamat datang di weblog saya
 Petama kali dibuat pada 24 November 2018, saya baru mengubah total tampilan weblog saya pada 15 Desember 2019 karena tidak ada waktu yang tepat untuk mengubah dan pada waktu itu saya agak bosan dengan teknologi web.
 
-[Link to another page](./another-page.html).
+[Percobaan](./another-page.html).
 
-# H1
+## Pengujian berbagai fitur "Hacker"
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+> Orang-orang berpikir komputer akan mencegah mereka membuat kesalahan. Mereka salah. 
+> Dengan komputer, Anda membuat kesalahan lebih banyak
+>                  
+> - Adam Osborne
 
-## H2
+```cpp
+// Potongan kode "cpu.c" dari Kernel Linux
+void enable_nonboot_cpus(void)
+{
+	int cpu, error;
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+	/* Allow everyone to use the CPU hotplug again */
+	cpu_maps_update_begin();
+	__cpu_hotplug_enable();
+	if (cpumask_empty(frozen_cpus))
+		goto out;
 
-### H3
+	pr_info("Enabling non-boot CPUs ...\n");
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+	arch_enable_nonboot_cpus_begin();
+
+	for_each_cpu(cpu, frozen_cpus) {
+		trace_suspend_resume(TPS("CPU_ON"), cpu, true);
+		error = _cpu_up(cpu, 1, CPUHP_ONLINE);
+		trace_suspend_resume(TPS("CPU_ON"), cpu, false);
+		if (!error) {
+			pr_info("CPU%d is up\n", cpu);
+			continue;
+		}
+		pr_warn("Error taking CPU%d up: %d\n", cpu, error);
+	}
+
+	arch_enable_nonboot_cpus_end();
+
+	cpumask_clear(frozen_cpus);
+out:
+	cpu_maps_update_done();
 }
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
 ```
 
 #### H4
