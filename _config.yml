@@ -3,3 +3,4 @@ description: Weblog seorang pengguna Linux
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-hacker
+permalink: /:title/
