@@ -1,12 +1,11 @@
 # adhiansyah.gtihub.io
-Repositori dari weblog [Adhiansyah Ancha](https://adhiansyah.github.io/)
-Dilisensikan dibawah Lisensi MIT
+Repositori dari weblog [Adhiansyah Ancha](https://adhiansyah.github.io/). Dilisensikan dibawah Lisensi MIT
 
-## Kredit
-- [Jekyll-now oleh Barry Clark](https://github.com/barryclark/jekyll-now/issues/new) 
+# Kredit
+- [Jekyll-now oleh Barry Clark](https://github.com/barryclark/jekyll-now/issues/new) (Pengembang utama)
+- [Jekyll](https://github.com/jekyll/jekyll) (Perangkat lunak generator web statis)
 
-## Tambahan kredit
-- [Jekyll](https://github.com/jekyll/jekyll)
+Dan pendukungnya:
 - [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons)
 - [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058)
 - [Joel Glovier](http://joelglovier.com/writing/)
