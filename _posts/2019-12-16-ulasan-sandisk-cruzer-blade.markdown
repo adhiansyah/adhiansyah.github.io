@@ -9,3 +9,5 @@ Mengawali pos pertama di weblog ini, saya akan mengulas sebuah _USB Flash Drive_
 Warna merah-hitamnya dan bentuknya yang bergaya dan kompak membuat UFD ini terlihat menarik apabila dilihat. Ada juga Cruzer Blade yang berwarna putih, biru, hijau, dan merah muda yang dijual di internet. Tetapi merah-hitam adalah warna yang banyak dipasarkan.
 
 ![img20191216093813](https://adhiansyahancha.files.wordpress.com/2019/12/img20191216093813.jpg)
+
+Saya menyadari bahwa kemasan plastiknya dapat membuat UFD ini rentan terhadap kerusakan fisik, apalagi dengan dimensi konektor USB nya yang kecil sehingga butuh paksaan sedikit untuk mencabut dan memasangnya.
