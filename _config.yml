@@ -2,9 +2,9 @@
 # Berkas konfigurasi untuk weblog
 #
 
-name: Your Name
-description: Web Developer from Somewhere
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+name: Adhiansyah Ancha
+description: Weblog seorang pengguna Linux
+theme: theme-jekyll-hacker
 
 footer-links:
   dribbble:
