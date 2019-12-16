@@ -8,6 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://adhiansyah.github.io" 
 github_username:  adhiansyah
 twitter_username: adhiansyahancha
+google_analytics: UA-154666828-1
 
 # Build settings
 theme: minima
