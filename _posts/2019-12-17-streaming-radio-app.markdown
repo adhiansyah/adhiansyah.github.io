@@ -1,13 +1,25 @@
 ---
-title: "Membuat Aplikasi Streaming Radio dengan Android Studio"
+title: "Aplikasi Streaming Radio dengan Kotlin"
 layout: post
 author: "Adhiansyah Ancha"
 categories: blog
 ---
 
-Selamat datang di pos pertama weblog ini. Kali ini saya akan menuliskan tentang cara menerapkan _streaming_ radio dengan Android Studio. Pos saya ini lebih menekankan kepada pencatatan referensi saja, bukan tahap-tahap menerapkannya. Karena itu mungkin para pembaca kesulitan harus mulai dari mana.
+Awalnya saya anggap wajar kalau dulu (Android 4 kalau gak salah) ponsel memiliki antena untuk mencari gelombang radio. Kemudian mulai bingung ketika muncul aplikasi radio tanpa membutuhkan _interface_ apapun. Akhirnya saya mengetahui konsep _streaming_ pada aplikasi radio. Lalu saya bertanya-tanya apakah aplikasi ini pakai gelombang FM? 
 
-_Streaming_ radio bisa dijalankan hanya dengan 2 tombol _FloatingActionButton_ (mulai dan jeda). Saya menemukan bahwa ketika tombol mulai memproses _streaming_, dan tiba-tiba pengguna menekan tombol jeda, hal yang terjadi adalah `prepareAsync()` (inisisasi streaming pada tombol mulai) berhenti pada keadaan 4 (memproses).
+Ternyata tidak. Mereka menggunakan peladen _streaming_ dengan URL yang unik. Dengan URL tersebut mereka menggunakannya sebagai sumber _streaming_ radio.
 
-Ini akan mengakibatkan bila pengguna menekan tombol mulai lagi, aplikasi akan tiba-tiba keluar tanpa ada pemberitahuan. Dalam log Android Studio, ini ditandai dengan pelemparan error `java.lang.IllegalStateException at android.media.MediaPlayer.prepareAsync(Native Method)`.
+Membuat aplikasi _streaming_ radio dalam Kotlin memiliki tantangan. Referensi aplikasi _streaming_ yang saya temui adalah sumber kode Java dan API yang sudah usang, sehingga saya harus berusaha menyesuaikannya dengan spesifikasi Kotlin yang ada.
+
+--
+
+Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
+
+```Kotlin
+
+```
+
+Apabila menggunakan _Fragment_, kita perlu memanggil `view.findViewById()` atau kalau terdapat `inflater`, kita bisa me
+
+
 
