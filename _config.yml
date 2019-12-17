@@ -9,7 +9,7 @@ description: >
 show_excerpts: false # set to true to show excerpts on the homepage
 
 minima:
-  date_format: "%d %B %Y, Q%q"  # Sesuai dengan strftime() Python: https://strftime.org/
+  date_format: "%d %B %Y, %R:%S:%N %z"  # Sesuai dengan strftime() Python: https://strftime.org/
   social_links:
     twitter: adhiansyahancha
     github:  adhiansyah
