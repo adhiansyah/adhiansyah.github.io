@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var pemutarMedia: MediaPlayer
     ...
     ...
-    private fun inisialisasi() { /* Panggil fungsi ini di onCreate() */
+    /* Panggil fungsi ini di onCreate() */
+    private fun inisialisasi() {
         putarRadio = findViewById(R.id.fabPutar)
         putarRadio.setOnClickListener(this)
 
@@ -41,10 +42,11 @@ class FirstFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
+                                  
     /*Bungkus inflater-nya menjadi inisialisasi variabel*/
     val v: View = inflater.inflate(R.layout.fragment_first, container, false)
     ...
-    return v /* Jangan lupa untuk di-return */
+    return v    /* Jangan lupa untuk di-return */
 ```
 
 
