@@ -13,7 +13,8 @@ Membuat aplikasi _streaming_ radio dalam Kotlin memiliki tantangan. Referensi ap
 
 Mari kita mulai.
 
-1. Buat proyek baru dengan _Activity_ kosong. Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
+Buat proyek baru dengan _Activity_ kosong. Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
+
 ```Java
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var sumberStreaming: String = "http://127.0.0.1:8000"
@@ -42,7 +43,7 @@ class FirstFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
-                                  
+
     /*Bungkus inflater-nya menjadi inisialisasi variabel*/
     val v: View = inflater.inflate(R.layout.fragment_first, container, false)
     ...
