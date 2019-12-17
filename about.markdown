@@ -1,18 +1,13 @@
 ---
 layout: page
-title: About
+title: Tentang
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# Saya
+Adhiansyah Ancha adalah seorang Linuxer yang ingin mendalami bahasa pemrograman Python3 dan pengembangan aplikasi Android meskipun tidak menyukai Android itu sendiri, dengan alasan tidak dapat mengutak-atik sistem level rendah. Ia sangat menyukai nasi goreng, diikuti dengan mi instan dan nasi gandul.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Kalian dapat menemuiku di [Twitter](https://twitter.com/adhiansyahancha)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+# Weblog
+Weblog ini berdiri pada tanggal 24 November 2018 dengan GitHub Pages. Awalnya, digunakan sebagai web latihan HTML dan CSS karena saya dapat bebas mengutak-atik bahasa web meski tidak mendukung bahasa sisi-server. Kemudian saya tinggalkan selama setahun lebih hingga pada tanggal 15 Desember 2019, saya melihat Jekyll dapat memperbarui _look and feel_ sekaligus mengubah fungsinya menjadi weblog. Kini tampilannya menjadi apa yang kalian lihat.
