@@ -8,10 +8,8 @@ description: >
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
-# Minima date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%d %B %Y, %R:%S:%N %z"
+  date_format: "%d %B %Y, %R:%S:%N %z"  # Sesuai dengan strftime() Python: https://strftime.org/
   social_links:
     twitter: adhiansyahancha
     github:  adhiansyah
