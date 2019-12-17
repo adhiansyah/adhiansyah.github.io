@@ -17,11 +17,8 @@ Buat proyek baru dengan _Activity_ kosong. Dengan _Activity_ sebagai komponen ap
 
 ```Java
 class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private var sumberStreaming: String = "http://127.0.0.1:8000"
     private lateinit var putarRadio: FloatingActionButton
     private lateinit var jedaRadio: FloatingActionButton
-    private lateinit var pemutarMedia: MediaPlayer
-    ...
     ...
     /* Panggil fungsi ini di onCreate() */
     private fun inisialisasi() {
@@ -44,10 +41,11 @@ class FirstFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-    /*Bungkus inflater-nya menjadi inisialisasi variabel*/
+    /* Bungkus inflater-nya menjadi inisialisasi variabel */
     val v: View = inflater.inflate(R.layout.fragment_first, container, false)
     ...
-    return v    /* Jangan lupa untuk di-return */
+    /* Jangan lupa, return */
+    return v
 ```
 
 
