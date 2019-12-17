@@ -11,15 +11,45 @@ Ternyata tidak. Mereka menggunakan peladen _streaming_ dengan URL yang unik. Den
 
 Membuat aplikasi _streaming_ radio dalam Kotlin memiliki tantangan. Referensi aplikasi _streaming_ yang saya temui adalah sumber kode Java dan API yang sudah usang, sehingga saya harus berusaha menyesuaikannya dengan spesifikasi Kotlin yang ada.
 
---
+Mari kita mulai.
 
-Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
+1. Buat proyek baru dengan _Activity_ kosong. Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
 
+`MainActivity`
 ```Kotlin
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+    private var sumberStreaming: String = "http://220.247.174.3:8000"
+    private lateinit var putarRadio: FloatingActionButton
+    private lateinit var jedaRadio: FloatingActionButton
+    private lateinit var pemutarMedia: MediaPlayer
+    ...
+    ...
+    private fun inisialisasi() { /* Panggil fungsi ini di onCreate() */
+        putarRadio = findViewById(R.id.fabPutar)
+        putarRadio.setOnClickListener(this)
 
+        jedaRadio = findViewById(R.id.fabJeda)
+        jedaRadio.isEnabled = false
+        jedaRadio.setOnClickListener(this)
+    }
 ```
 
-Apabila menggunakan _Fragment_, kita perlu memanggil `view.findViewById()` atau kalau terdapat `inflater`, kita bisa me
+Apabila menggunakan _Fragment_, kita perlu memanggil `view.findViewById()` atau kalau terdapat `inflater`:
+
+`FirstFragment`
+```Kotlin
+class FirstFragment : Fragment() {
+    private var param1: String? = null
+    private var param2: String? = null
+    private var listener: OnFragmentInteractionListener? = null
+
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    /*Bungkus inflater-nya menjadi inisialisasi variabel*/
+    val v: View = inflater.inflate(R.layout.fragment_first, container, false)
+    ...
+    return v /* Jangan lupa untuk di-return */
+```
 
 
 
