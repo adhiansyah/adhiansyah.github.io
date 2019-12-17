@@ -13,40 +13,41 @@ Membuat aplikasi _streaming_ radio dalam Kotlin memiliki tantangan. Referensi ap
 
 Mari kita mulai.
 
-Buat proyek baru dengan _Activity_ kosong. Dengan _Activity_ sebagai komponen aplikasi, kita bisa dengan mudah memanggil `findViewById()` untuk merepresentasikan widget kita dalam layout _Activity_. 
+1. Buat proyek baru dengan _Activity_ kosong. Saya menambahkan 2  _FloatingActionButton_ dalam layout `activity_main.xml` dengan nama ID `fabPutar` dan `fabJeda`. Bisa disesuaikan sesuai kebutuhan
+```XML
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPutar" 
+        android:layout_width="68dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="202dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
-```Java
-class MainActivity : AppCompatActivity(), View.OnClickListener {
-    private lateinit var putarRadio: FloatingActionButton
-    private lateinit var jedaRadio: FloatingActionButton
-    ...
-    /* Panggil fungsi ini di onCreate() */
-    private fun inisialisasi() {
-        putarRadio = findViewById(R.id.fabPutar)
-        putarRadio.setOnClickListener(this)
-
-        jedaRadio = findViewById(R.id.fabJeda)
-        jedaRadio.isEnabled = false
-        jedaRadio.setOnClickListener(this)
-    }
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabJeda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="201dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@android:drawable/ic_media_pause" />
 ```
 
-Apabila menggunakan _Fragment_, kita perlu memanggil `view.findViewById()` atau kalau terdapat `inflater`:
-```Java
-class FirstFragment : Fragment() {
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
-
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-    /* Bungkus inflater-nya menjadi inisialisasi variabel */
-    val v: View = inflater.inflate(R.layout.fragment_first, container, false)
-    ...
-    /* Jangan lupa, return */
-    return v
-```
-
-
+2. Saya akan menggunakan `MainActivity` sebagai dasar antarmuka  _streaming_ radio:
 
